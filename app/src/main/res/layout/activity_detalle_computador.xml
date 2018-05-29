@@ -192,17 +192,6 @@
         fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right">
 
         <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/menu_modificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_edit"
-            fab:fab_size="mini"
-            fab:fab_label="@string/modificar"
-            app:fab_colorNormal="@color/colorAccent"
-            app:fab_colorPressed="@color/colorAccent"
-            />
-
-        <com.github.clans.fab.FloatingActionButton
             android:id="@+id/menu_eliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
