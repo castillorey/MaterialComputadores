@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textSize="13dp"
+    android:textSize="16dp"
     android:padding="5dp"
     android:textAlignment="textStart"
     android:fontFamily="@font/open_sans"

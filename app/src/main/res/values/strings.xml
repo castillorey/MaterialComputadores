@@ -64,4 +64,5 @@
     <string name="pregunta_eliminacion">¿Seguro que desea eliminar a este computador?</string>
     <string name="error_ram_vacio">Debe digitar un valor</string>
     <string name="error_combo_vacio">Debe seleccionar un valor</string>
+    <string name="nuevo">Nuevo Computador</string>
 </resources>

@@ -102,11 +102,7 @@ public class CrearComputador extends AppCompatActivity {
         int tipo = cmbTipo.getSelectedItemPosition();
         int so = cmbSo.getSelectedItemPosition();
 
-        if(txtRam.getText().toString().isEmpty()){
-            txtRam.requestFocus();
-            txtRam.setError(getResources().getString(R.string.error_ram_vacio));
-            return false;
-        }
+
 
         if(marca == 0){
             cmbMarca.requestFocus();
@@ -115,6 +111,12 @@ public class CrearComputador extends AppCompatActivity {
             errorText.setTextColor(Color.RED);
             errorText.setText(getResources().getString(R.string.error_combo_vacio));
 
+            return false;
+        }
+
+        if(txtRam.getText().toString().isEmpty()){
+            txtRam.requestFocus();
+            txtRam.setError(getResources().getString(R.string.error_ram_vacio));
             return false;
         }
 
