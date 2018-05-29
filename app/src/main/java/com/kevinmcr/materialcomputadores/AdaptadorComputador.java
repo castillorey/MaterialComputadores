@@ -1,5 +1,6 @@
 package com.kevinmcr.materialcomputadores;
 
+import android.content.res.Resources;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,9 +19,12 @@ public class AdaptadorComputador extends RecyclerView.Adapter<AdaptadorComputado
     private ArrayList<Computador> computadores;
     private OnComputadorClickListener clickListener;
 
+
+
     public AdaptadorComputador(ArrayList<Computador> computadores, OnComputadorClickListener clickListener){
         this.computadores = computadores;
         this.clickListener = clickListener;
+
     }
 
     @Override
@@ -32,17 +36,18 @@ public class AdaptadorComputador extends RecyclerView.Adapter<AdaptadorComputado
     @Override
     public void onBindViewHolder(ComputadorViewHolder holder, int position) {
         final Computador c = computadores.get(position);
+
         holder.imagen.setImageResource(c.getImg());
         holder.marca.setText(c.getMarca());
-        holder.ram.setText(c.getRam());
+        holder.ram.setText(""+ c.getRam());
         holder.color.setText(c.getColor());
-        holder.tipo.setText(c.getTipo());
-        holder.so.setText(c.getSo());
 
         holder.v.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 clickListener.onComputadorClick(c);
+
             }
         });
     }
@@ -59,6 +64,7 @@ public class AdaptadorComputador extends RecyclerView.Adapter<AdaptadorComputado
         private View v;
 
         public ComputadorViewHolder(View itemView){
+
             super(itemView);
             v = itemView;
             imagen = v.findViewById(R.id.imgFoto);

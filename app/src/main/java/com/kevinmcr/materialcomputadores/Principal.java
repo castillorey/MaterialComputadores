@@ -27,7 +27,6 @@ public class Principal extends AppCompatActivity implements AdaptadorComputador.
     private ArrayList<Computador> computadores;
     private AdaptadorComputador adapter;
     private LinearLayoutManager llm;
-    private ArrayList<Integer> imagenes;
     private DatabaseReference databaseReference;
     private String bd = "Computadores";
     @Override
@@ -44,6 +43,9 @@ public class Principal extends AppCompatActivity implements AdaptadorComputador.
         llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         adapter = new AdaptadorComputador(computadores,this);
+
+        rcycleLista.setLayoutManager(llm);
+        rcycleLista.setAdapter(adapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
         databaseReference.child(bd).addValueEventListener(new ValueEventListener() {
@@ -102,13 +104,15 @@ public class Principal extends AppCompatActivity implements AdaptadorComputador.
         Bundle b = new Bundle();
         b.putString("id",p.getId());
         b.putInt("imagen",p.getImg());
-        b.putInt("marca",p.getMarca());
+        b.putString("marca",p.getMarca());
         b.putInt("ram",p.getRam());
-        b.putInt("color",p.getColor());
-        b.putInt("tipo",p.getTipo());
-        b.putInt("so",p.getSo());
+        b.putString("color",p.getColor());
+        b.putString("tipo",p.getTipo());
+        b.putString("so",p.getSo());
 
         i.putExtra("datos",b);
         startActivity(i);
     }
+
+
 }

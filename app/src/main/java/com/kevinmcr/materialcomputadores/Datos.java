@@ -22,12 +22,12 @@ public class Datos {
         databaseReference.child(db).child(c.getId()).setValue(c);
     }
 
-    public static int fotoAleatoria (ArrayList<Integer> fotos){
-        int fotoSeleccionada;
+    public static int fotoAleatoria (ArrayList<Integer> imagenes){
+        int imagenSeleccionada;
         Random r = new Random();
-        fotoSeleccionada = r.nextInt(fotos.size());
+        imagenSeleccionada = r.nextInt(imagenes.size());
 
-        return fotos.get(fotoSeleccionada);
+        return imagenes.get(imagenSeleccionada);
     }
 
     public static String getId(){

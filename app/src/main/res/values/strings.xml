@@ -7,6 +7,7 @@
     <string name="tipo">Tipo</string>
     <string name="sistema_operativo">Sistema Operativo</string>
     <string name="guardar">Guardar</string>
+    <string name="none">------</string>
     <string name="limpiar">Limpiar</string>
     <string name="hp">HP</string>
     <string name="lenovo">Lenovo</string>
@@ -15,6 +16,7 @@
 
 
     <string-array name="marcas">
+        <item>@string/none</item>
         <item>@string/hp</item>
         <item>@string/lenovo</item>
         <item>@string/asus</item>
@@ -26,6 +28,7 @@
     <string name="blanco">Blanco</string>
 
     <string-array name="colores">
+        <item>@string/none</item>
         <item>@string/negro</item>
         <item>@string/plateado</item>
         <item>@string/blanco</item>
@@ -36,6 +39,7 @@
     <string name="ultrabook">UltraBook</string>
 
     <string-array name="tipos">
+        <item>@string/none</item>
         <item>@string/ordenador</item>
         <item>@string/laptop</item>
         <item>@string/ultrabook</item>
@@ -45,6 +49,7 @@
     <string name="linux">Linux</string>
 
     <string-array name="sos">
+        <item>@string/none</item>
         <item>@string/win</item>
         <item>@string/linux</item>
     </string-array>
@@ -57,4 +62,6 @@
     <string name="positivo">Si</string>
     <string name="negativo">No</string>
     <string name="pregunta_eliminacion">¿Seguro que desea eliminar a este computador?</string>
+    <string name="error_ram_vacio">Debe digitar un valor</string>
+    <string name="error_combo_vacio">Debe seleccionar un valor</string>
 </resources>

@@ -13,8 +13,8 @@ public class DetalleComputador extends AppCompatActivity {
     private TextView tvMarca,tvRam, tvColor, tvTipo, tvSo;
     private String[] marcas, colores, tipos, sos;
     private ImageView imgDetalle;
-    private String id;
-    private int imagen, marca, ram, color, tipo, so;
+    private String id, marca, color, tipo, so;
+    private int imagen, ram;
     private Intent i;
     private Bundle bundle;
 
@@ -25,11 +25,12 @@ public class DetalleComputador extends AppCompatActivity {
         setContentView(R.layout.activity_detalle_computador);
 
         imgDetalle = findViewById(R.id.imgDetalle);
-        tvMarca = findViewById(R.id.tvMarca);
-        tvRam = findViewById(R.id.tvRam);
-        tvColor = findViewById(R.id.tvColor);
-        tvTipo = findViewById(R.id.tvTipo);
-        tvSo = findViewById(R.id.tvSo);
+        tvMarca = findViewById(R.id.lblMarcaDetalle);
+        tvRam = findViewById(R.id.lblRamDetalle);
+        tvColor = findViewById(R.id.lblColorDetalle);
+        tvTipo = findViewById(R.id.lblTipoDetalle);
+        tvSo = findViewById(R.id.lblSoDetalle);
+
         marcas = getResources().getStringArray(R.array.marcas);
         colores = getResources().getStringArray(R.array.colores);
         tipos = getResources().getStringArray(R.array.tipos);
@@ -39,18 +40,18 @@ public class DetalleComputador extends AppCompatActivity {
         bundle = getIntent().getBundleExtra("datos");
         id = bundle.getString("id");
         imagen = bundle.getInt("imagen");
-        marca = bundle.getInt("marca");
+        marca = bundle.getString("marca");
         ram = bundle.getInt("ram");
-        color = bundle.getInt("color");
-        tipo = bundle.getInt("tipo");
-        so = bundle.getInt("so");
+        color = bundle.getString("color");
+        tipo = bundle.getString("tipo");
+        so = bundle.getString("so");
 
         imgDetalle.setImageResource(imagen);
-        tvMarca.setText(marcas[marca]);
-        tvRam.setText(ram);
-        tvColor.setText(colores[color]);
-        tvTipo.setText(tipos[tipo]);
-        tvSo.setText(sos[so]);
+        tvMarca.setText(marca);
+        tvRam.setText("" + ram);
+        tvColor.setText(color);
+        tvTipo.setText(tipo);
+        tvSo.setText(so);
 
     }
 

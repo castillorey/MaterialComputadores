@@ -5,8 +5,8 @@ package com.kevinmcr.materialcomputadores;
  */
 
 public class Computador {
-    private String id;
-    private int marca, ram, color, tipo, so, img;
+    private String id, marca, color, tipo, so;
+    private int  img, ram;
 
 
     public Computador (){
@@ -17,14 +17,14 @@ public class Computador {
         this.id = id;
     }
 
-    public Computador(String id, int marca, int ram, int color, int tipo, int so, int img) {
+    public Computador(String id, String marca, String color, String tipo, String so, int img, int ram) {
         this.id = id;
         this.marca = marca;
-        this.ram = ram;
         this.color = color;
         this.tipo = tipo;
         this.so = so;
         this.img = img;
+        this.ram = ram;
     }
 
     public String getId() {
@@ -35,43 +35,35 @@ public class Computador {
         this.id = id;
     }
 
-    public int getMarca() {
+    public String getMarca() {
         return marca;
     }
 
-    public void setMarca(int marca) {
+    public void setMarca(String marca) {
         this.marca = marca;
     }
 
-    public int getRam() {
-        return ram;
-    }
-
-    public void setRam(int ram) {
-        this.ram = ram;
-    }
-
-    public int getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(int color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
-    public int getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(int tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
-    public int getSo() {
+    public String getSo() {
         return so;
     }
 
-    public void setSo(int so) {
+    public void setSo(String so) {
         this.so = so;
     }
 
@@ -81,6 +73,14 @@ public class Computador {
 
     public void setImg(int img) {
         this.img = img;
+    }
+
+    public int getRam() {
+        return ram;
+    }
+
+    public void setRam(int ram) {
+        this.ram = ram;
     }
 
     public void guardar(){

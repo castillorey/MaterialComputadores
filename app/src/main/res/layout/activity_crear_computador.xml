@@ -22,6 +22,7 @@
             android:id="@+id/tvMarca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans"
             android:text="@string/marca"
             android:textAlignment="textStart"
             android:textSize="18sp"
@@ -43,7 +44,8 @@
             android:id="@+id/txtRam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/ram" />
+            android:hint="@string/ram"
+            android:inputType="number" />
     </android.support.design.widget.TextInputLayout>
 
     <LinearLayout
@@ -114,6 +116,7 @@
 
     <Button
         android:id="@+id/btnGuardar"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="guardar"
